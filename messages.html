@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Messages | ConnecFriend</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link href="vendor/bootstrap/bootstrap.min.css" rel="stylesheet">
+  <link href="vendor/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<div class="d-lg-flex">
+  <header id="shell" class="cf-shell"></header>
+  <main class="cf-main flex-grow-1 p-3 p-lg-4">
+    <h1 class="h3 fw-bold mb-3">Messages</h1>
+    <div class="card cf-chat overflow-hidden">
+      <div class="row g-0 h-100">
+        <div class="col-lg-4 border-end h-100 d-flex flex-column" id="listPane">
+          <div class="p-2 border-bottom">
+            <label for="memberSearch" class="visually-hidden">Message a member</label>
+            <input type="search" id="memberSearch" class="form-control" placeholder="Message any member..." autocomplete="off">
+            <div id="memberResults" class="list-group mt-1 d-none position-absolute shadow" style="z-index:5;width:calc(100% - 1rem)"></div>
+          </div>
+          <div class="cf-thread-list flex-grow-1" id="threadList"></div>
+        </div>
+        <div class="col-lg-8 h-100 d-none d-lg-flex flex-column" id="chatPane"></div>
+      </div>
+    </div>
+  </main>
+</div>
+<script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="js/data.js"></script>
+<script src="js/common.js"></script>
+<script src="js/messages.js"></script>
+</body>
+</html>

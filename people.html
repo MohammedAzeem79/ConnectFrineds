@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>People & requests | ConnecFriend</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link href="vendor/bootstrap/bootstrap.min.css" rel="stylesheet">
+  <link href="vendor/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<div class="d-lg-flex">
+  <header id="shell" class="cf-shell"></header>
+  <main class="cf-main flex-grow-1 p-3 p-lg-4">
+    <h1 class="h3 fw-bold mb-3">People &amp; requests</h1>
+    <ul class="nav nav-pills mb-3 gap-1" id="peopleTabs" role="tablist">
+      <li class="nav-item" role="presentation"><button class="nav-link active" data-bs-toggle="pill" data-bs-target="#tabDiscover" type="button" role="tab">Discover</button></li>
+      <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#tabRequests" type="button" role="tab">Requests <span class="badge text-bg-danger" id="reqCount"></span></button></li>
+      <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#tabIgnored" type="button" role="tab">Ignore list</button></li>
+    </ul>
+    <div class="tab-content">
+      <div class="tab-pane fade show active" id="tabDiscover" role="tabpanel">
+        <label for="search" class="visually-hidden">Search members</label>
+        <div class="input-group mb-3" style="max-width:420px"><span class="input-group-text"><i class="bi bi-search"></i></span>
+          <input type="search" id="search" class="form-control" placeholder="Search members by name or city"></div>
+        <div class="row g-3" id="discoverList"></div>
+      </div>
+      <div class="tab-pane fade" id="tabRequests" role="tabpanel">
+        <div class="row g-4">
+          <div class="col-lg-6"><h2 class="h6 fw-bold">Received</h2><div id="incoming"></div></div>
+          <div class="col-lg-6"><h2 class="h6 fw-bold">Sent</h2><div id="outgoing"></div></div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="tabIgnored" role="tabpanel">
+        <p class="text-secondary small">People on this list cannot send you friend requests.</p>
+        <div id="ignoredList"></div>
+      </div>
+    </div>
+  </main>
+</div>
+<script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="js/data.js"></script>
+<script src="js/common.js"></script>
+<script src="js/people.js"></script>
+</body>
+</html>

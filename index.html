@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign in | ConnecFriend</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link href="vendor/bootstrap/bootstrap.min.css" rel="stylesheet">
+  <link href="vendor/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<div class="container-fluid">
+  <div class="row min-vh-100">
+    <section class="col-lg-6 cf-login-art d-flex flex-column justify-content-between p-4 p-lg-5" style="min-height:260px">
+      <a href="index.html" class="cf-brand"><span class="cf-mark" aria-hidden="true"><i></i><i></i></span><span class="cf-wordmark">ConnecFriend</span></a>
+      <div class="my-4">
+        <h1 class="display-5 fw-bold mb-3">Keep up with the people<br>you actually know.</h1>
+        <p class="fs-5 mb-0" style="max-width:34ch;color:#cfe3e3">Share news with all your friends or only a few, rate who you trust, and message anyone on the site.</p>
+      </div>
+      <small class="cf-muted-on-dark d-none d-lg-block">Air University Islamabad · CS 301 Assignment 1</small>
+    </section>
+
+    <section class="col-lg-6 d-flex align-items-center justify-content-center p-4">
+      <div class="w-100" style="max-width:400px">
+        <h2 class="h3 fw-bold mb-1">Welcome back</h2>
+        <p class="text-secondary mb-4">Sign in to see what your friends are sharing.</p>
+
+        <div id="formAlert" class="alert alert-danger d-none" role="alert"></div>
+
+        <form id="loginForm" novalidate>
+          <div class="mb-3">
+            <label for="username" class="form-label fw-semibold">Username</label>
+            <input type="text" class="form-control form-control-lg" id="username" autocomplete="username" autofocus required>
+            <div class="invalid-feedback" id="usernameError"></div>
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label fw-semibold">Password</label>
+            <div class="input-group has-validation">
+              <input type="password" class="form-control form-control-lg" id="password" autocomplete="current-password" required>
+              <button class="btn btn-outline-secondary" type="button" id="togglePw" aria-label="Show password"><i class="bi bi-eye"></i></button>
+              <div class="invalid-feedback" id="passwordError"></div>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg w-100">Sign in</button>
+        </form>
+
+        <div class="mt-4 p-3 rounded-3 bg-white border">
+          <p class="small fw-semibold mb-2">Demo accounts <span class="text-secondary fw-normal">(password is the username + 123)</span></p>
+          <div class="d-flex flex-wrap gap-2" id="demoChips"></div>
+        </div>
+        <button type="button" id="resetData" class="btn btn-link btn-sm text-secondary mt-2 px-0">Reset demo data</button>
+      </div>
+    </section>
+  </div>
+</div>
+<script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="js/data.js"></script>
+<script src="js/common.js"></script>
+<script src="js/login.js"></script>
+</body>
+</html>
